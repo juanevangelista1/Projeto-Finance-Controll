@@ -5,7 +5,7 @@ export function Header() {
   return (
     <HeaderContainer>
       <HeaderContent>
-        <img src={logoImg} alt="" />
+        <img src={logoImg} alt="Imagem de saco de dinheiro azul claro" />
         <h1>Controle de finanças</h1>
 
         <NewTransactionButton>Nova Transação</NewTransactionButton>
