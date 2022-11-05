@@ -9,7 +9,7 @@ import {
   Content,
   Overlay,
   TransactionType,
-  TransactionTypeButton
+  TransactionTypeButton,
 } from './styles'
 import { useContext } from 'react'
 import { TransactionsContext } from '../../contexts/TransactionsContext'
@@ -18,7 +18,7 @@ const newTransactionFormSchema = z.object({
   description: z.string(),
   price: z.number(),
   category: z.string(),
-  type: z.enum(['income', 'outcome'])
+  type: z.enum(['income', 'outcome']),
 })
 
 type NewTransactionFormInputs = z.infer<typeof newTransactionFormSchema>
@@ -31,12 +31,12 @@ export function NewTransactionModal() {
     register,
     handleSubmit,
     formState: { isSubmitting },
-    reset
+    reset,
   } = useForm<NewTransactionFormInputs>({
     resolver: zodResolver(newTransactionFormSchema),
     defaultValues: {
-      type: 'income'
-    }
+      type: 'income',
+    },
   })
 
   async function handleCreateNewTransaction(data: NewTransactionFormInputs) {
@@ -46,7 +46,7 @@ export function NewTransactionModal() {
       description,
       price,
       category,
-      type
+      type,
     })
 
     reset()
