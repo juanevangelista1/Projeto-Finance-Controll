@@ -1,5 +1,20 @@
 {
   "transactions": [
-   
+    {
+      "description": "Teste",
+      "price": 1000,
+      "category": "Teste entrada",
+      "type": "income",
+      "createdAt": "2022-11-05T04:22:15.073Z",
+      "id": 1
+    },
+    {
+      "description": "teste saída",
+      "price": 200,
+      "category": "Teste saída",
+      "type": "outcome",
+      "createdAt": "2022-11-05T04:22:43.218Z",
+      "id": 2
+    }
   ]
 }
